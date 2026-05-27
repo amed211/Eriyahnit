@@ -1,4 +1,5 @@
 # Eriyahnit
+Eriyahnit takes inspiration from the cruel and villainous character Airachnid from the Transformers series. To make the name more unique, the name ‘Eriyahnit’ was chosen instead of ‘Airachnid
 Eriyahnit is a fileless initial access and persistence kit. It registers itself on the system as a scheduled task, and when executed, all operations occur in memory. Even if detected by antivirus solutions, it cannot be quarantined without manual intervention
 
 Eriyahnit is used to establish persistence on a device, bypass security mechanisms, and obtain full system control. However, Eriyahnit has one major limitation: for the program to execute successfully, it must either bypass User Account Control (UAC) or run on a system where UAC is disabled. Of course, this only applies to the initial access stage once a device has been compromised by Eriyahnit, UAC no longer provides meaningful protection.
