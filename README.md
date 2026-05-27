@@ -16,3 +16,8 @@ Disclaimer: Eriyahnit is shared strictly for educational and awareness purposes.
 (And to share my personal opinion: Eriyahnit operates at an APT/TTP-level capability, and for effective real-world usage it would need to be combined with a proper UAC bypass technique. I do not think most hackers are capable of doing that. Of course, there will be individuals who can, but those people would most likely keep such knowledge private
 
 # And finally, hacking is an art, and a hacker is an artist — just as cybersecurity itself is an art, and a cybersecurity professional is an artist
+
+
+
+https://github.com/user-attachments/assets/f65d10d0-3552-483e-8620-43f658ebf572
+
