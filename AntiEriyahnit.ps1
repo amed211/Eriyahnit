@@ -1,6 +1,5 @@
 $foundTasks = @()
 
-# Get all tasks in all folders (including root \)
 $allTasks = Get-ScheduledTask -ErrorAction SilentlyContinue
 
 foreach ($task in $allTasks) {
@@ -22,17 +21,14 @@ if ($foundTasks.Count -eq 0) {
 
         Write-Host "Processing: $taskPath$taskName" -ForegroundColor Cyan
 
-        # Stop if currently running
         try {
             Stop-ScheduledTask -TaskPath $taskPath -TaskName $taskName -ErrorAction SilentlyContinue
         } catch {}
 
-        # Delete
         try {
             Unregister-ScheduledTask -TaskPath $taskPath -TaskName $taskName -Confirm:$false -ErrorAction Stop
             Write-Host "$taskName - Eriyahnit deleted." -ForegroundColor Green
         } catch {
-            # If permission error, force delete with schtasks.exe
             $fullPath = "$taskPath$taskName" -replace "\\\\", "\"
             $result = schtasks /Delete /TN "$fullPath" /F 2>&1
             if ($LASTEXITCODE -eq 0) {
