@@ -26,19 +26,19 @@ Alternatively, you can copy the code from the provided .ps1 file and paste it in
 
 To allow PowerShell to run .ps1 files, use the following command:
 
-'''Set-ExecutionPolicy RemoteSigned -Scope Process'''
+```Set-ExecutionPolicy RemoteSigned -Scope Process```
 
 ## Creating and Running the Task
 
 After creating the task, start it with:
 
-Start-ScheduledTask -TaskName "test"
+```Start-ScheduledTask -TaskName "test"```
 
 ## Removing the Task
 
 To delete the task:
 
-Unregister-ScheduledTask -TaskName "test" -Confirm:$false
+```Unregister-ScheduledTask -TaskName "test" -Confirm:$false```
 
 ## If the Task Keeps Running After Deletion
 
@@ -49,12 +49,12 @@ To get rid of it:
 1. Find all running PowerShell processes  
    Run this command to identify malicious processes:
 
-   Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" | Select-Object ProcessId, CommandLine | Format-List
+   ```Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" | Select-Object ProcessId, CommandLine | Format-List```
 
 2. Terminate the malicious process  
    Use the PID (e.g., 1388) from the output:
 
-   Stop-Process -Id 1388 -Force
+   ```Stop-Process -Id 1388 -Force```
 
 >  Warning: If someone knowledgeable modifies Eriyahnit, stopping it may not be this easy.
 
